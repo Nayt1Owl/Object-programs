@@ -30,13 +30,15 @@ namespace Proggs1
         {
             List<Good> goods = new List<Good>();
             if (!File.Exists(fileName)) return goods;
-
-            string[] lines = File.ReadAllLines(fileName);
-            foreach (string line in lines)
+            using (StreamReader sr = new StreamReader(fileName))
             {
-                if (!string.IsNullOrWhiteSpace(line))
+                string line;
+                while ((line = sr.ReadLine()) != null)
                 {
-                    goods.Add(Good.FromString(line));
+                    if (!string.IsNullOrWhiteSpace(line))
+                    {
+                        goods.Add(Good.FromString(line));
+                    }
                 }
             }
             return goods;
@@ -76,13 +78,15 @@ namespace Proggs1
         {
             List<Client> clients = new List<Client>();
             if (!File.Exists(fileName)) return clients;
-
-            string[] lines = File.ReadAllLines(fileName);
-            foreach (string line in lines)
+            using (StreamReader sr = new StreamReader(fileName))
             {
-                if (!string.IsNullOrWhiteSpace(line))
+                string line;
+                while ((line = sr.ReadLine()) != null)
                 {
-                    clients.Add(Client.FromString(line));
+                    if (!string.IsNullOrWhiteSpace(line))
+                    {
+                        clients.Add(Client.FromString(line));
+                    }
                 }
             }
             return clients;
@@ -123,13 +127,15 @@ namespace Proggs1
         {
             List<Shop> shops = new List<Shop>();
             if (!File.Exists(fileName)) return shops;
-
-            string[] lines = File.ReadAllLines(fileName);
-            foreach (string line in lines)
+            using (StreamReader sr = new StreamReader(fileName))
             {
-                if (!string.IsNullOrWhiteSpace(line))
+                string line;
+                while ((line = sr.ReadLine()) != null)
                 {
-                    shops.Add(Shop.FromString(line));
+                    if (!string.IsNullOrWhiteSpace(line))
+                    {
+                        shops.Add(Shop.FromString(line));
+                    }
                 }
             }
             return shops;
