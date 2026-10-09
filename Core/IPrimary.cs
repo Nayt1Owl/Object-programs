@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ObjectProggs
+namespace Core
 {
     public interface IPrimary
     {

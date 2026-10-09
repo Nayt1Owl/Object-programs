@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Core;
 
-namespace Proggs1._1
+namespace Shop.Dal 
 {
-    public class ClientDao
+    public class ClientDao : IPrimary
     {
         public int Id { get; set; }
         public string FirstName { get; set; } = string.Empty;

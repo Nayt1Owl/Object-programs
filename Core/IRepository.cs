@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Proggs1._1
+namespace Core
 {
     public interface IRepository<T>
     {

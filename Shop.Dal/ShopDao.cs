@@ -1,8 +1,9 @@
 ﻿using System;
+using Core;
 
-namespace Proggs1._1
+namespace Shop.Dal
 {
-    public class ShopDao
+    public class ShopDao : IPrimary
     {
         public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
